@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
@@ -86,7 +87,7 @@ fun Dialer() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFB7E2E8))
+            .background(Color(0xFFD8EEF1))
             .padding(16.dp)
     )
     {
@@ -102,7 +103,7 @@ fun Dialer() {
                 Text(
                     text = "test",
                     modifier = Modifier,
-                    color = Color.Red,
+                    color = Color.Black,
                     style = Typography.headlineLarge
 
                 )
@@ -355,11 +356,14 @@ fun Dialer() {
                     .height(130.dp),
                 contentAlignment = Alignment.Center
             ){
-                FloatingActionButton(
+                Button(
                     onClick = {},
                     modifier = Modifier.width(200.dp).fillMaxHeight(),
-                    containerColor = Color(0xFF4CAF50),
-                    contentColor = Color.White
+                   colors = ButtonDefaults.buttonColors(
+                       containerColor = Color(0xFF04650A),
+                       contentColor = Color.White
+                   )
+
 
                 ){
                     Text(
